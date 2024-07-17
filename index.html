@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
     <title>GitHub Pages</title>
 </head>
 <body>
-    <p>Saludos</p>
+    <div class="contenedor">
+        <h1 id="Titulo"><strong>Monoprogramacion</strong></h1>
+        <label for="memoriaTotal">Total de Memoria (KBs):</label>
+        <input type="number" id="memoriaTotal" value="100" min="30" tep="1" readonly disabled>
+        <!--<button id="actualizarMemoriaT">Actualizar</button>-->
+
+        <br>
+
+        <label for="memoriaUsuario">Memoria para Usuario (KBs):</label>
+        <input type="number" id="memoriaUsuario" value="0" min="0" max="70" step="1">
+        <button id="agregarBoton">Agregar</button>
+        <br>
+        <label for="memoriaUsuario2">Memoria para Segundo Usuario (KBs):</label>
+        <input type="number" id="memoriaUsuario2" value="0" min="0" max="70" step="1">
+        <button id="agregarBoton2">Agregar Proceso</button>
+
+        <div class="memoria" id="memoriaPantalla">
+            <div class="so" id="memoriaSo">
+                <div class="Divlabel">SO <span id="soSize">30</span>KB</div>
+            </div>
+            <div class="usuario" id="usuarioMemoriaPantalla">
+                <div class="Divlabel">USUARIO <span id="usuarioSize">70</span>KB</div>
+                <div class="usuario-particion" id="usuarioParticion" style="display: none;">
+                    <div class="Divlabel"><span id="usuarioParticionSize">0</span>KB</div>
+                </div>
+                <div class="segundo-usuario-particion" id="usuarioParticion2" style="display: none;">
+                    <div class="Divlabel"><span id="usuarioParticionSize2">0</span>KB</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
